@@ -1,0 +1,18 @@
+# Summary
+
+* [设计模式](README.md)
+* [第一章:工厂模式](factory/README.md)
+    * [第一节: 工厂三兄弟之小弟](factory/简单工厂.md)
+    * [第二节: 工厂三兄弟之二哥](factory/工厂方法.md)
+    * [第三节: 工厂三兄弟之大哥](factory/抽象工厂.md)
+* [第二章:单例模式](singleton/README.md)
+* [第三章:原型模式](prototype/README.md)
+* [第四章:代理模式](proxy/README.md)
+* [第五章:委派模式](delegate/README.md)
+* [第六章:策略模式](strategy/README.md)
+* [第七章:模板模式](template/README.md)
+* [第八章:适配器模式](adapter/README.md)
+* [第九章:装饰者模式](decorator/README.md)
+* [第十章:观察者模式](observer/README.md)
+* [第十一章:责任链模式](chain/README.md)
+

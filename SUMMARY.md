@@ -15,6 +15,7 @@
 * [第九章:装饰者模式](decorator/README.md)
 * [第十章:观察者模式](observer/README.md)
 * [第十一章:责任链模式](chain/README.md)
+* [第十二章:设计7大原则](specification/7大原则.md)
 * [第十二章:总结](final/README.md)
     * [一句话总结设计模式](final/final.md)
     * [列举SpringAOP、IOC、DI应用中设计模式的代码片段](final/spring.md)

@@ -11,3 +11,43 @@
 * 模板方法模式:组装流程,具体钩子留给需要子类
 * 观察者模式:有什么事,在群里一说,我们都能看到
 
+
+
+`AOP` 
+
+```java
+@Aspect
+public class SpringAop {
+
+	@Pointcut("execution(* org.andywong..*.*(..))")
+	public void pointcut(){}
+
+	@Before("pointcut()")
+	public void before(){
+		System.out.println("pointcut before");
+	}
+
+	@After("pointcut()")
+	public void after(){
+		System.out.println("pointcut after");
+	}
+}
+```
+
+
+
+`DI`
+
+```java
+    @Autowired
+    private XxExportService xxExportService;
+```
+
+`IOC`
+
+```java
+Object bean1 = app.getBean("demoFactoryBean");
+```
+
+
+

@@ -64,6 +64,6 @@
     * [5.责任链模式](chain/README.md)
 * [第五章:总结](summary/final/README.md)
     * [一句话总结设计模式](summary/final/final.md)
-    * [列举SpringAOP、IOC、DI应用中设计模式的代码片段](summary/final/spring.md)
+    * [列举SpringAOP、IOC、DI应用代码片段](summary/final/spring.md)
 * [第六章:TODO](summary/TODO/README.md)
 

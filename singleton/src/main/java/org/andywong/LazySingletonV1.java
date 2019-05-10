@@ -15,12 +15,12 @@ public class LazySingletonV1 {
     /**
      * 私有化构造方法，让外部无法创建
      */
-    private LazySingletonV1(){
+    private LazySingletonV1() {
 
     }
 
     public static LazySingletonV1 getInstance() {
-        if(null == lazySingletonV1){
+        if (null == lazySingletonV1) {
             lazySingletonV1 = new LazySingletonV1();
         }
         return lazySingletonV1;

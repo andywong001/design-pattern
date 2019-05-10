@@ -5,6 +5,7 @@ package org.andywong.abstractfactory.v1;
  */
 public interface DriverFactory {
     IMember connectionMember();
+
     IJoinLog connectionJoinLog();
 
     /**

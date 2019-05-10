@@ -10,7 +10,7 @@ import java.util.Date;
  */
 public class ShallowCopy {
     public static void main(String[] args) throws CloneNotSupportedException {
-        Form form = new Form("表单1",new Date());
+        Form form = new Form("表单1", new Date());
         Object clone = form.clone();
         System.out.println(form == clone);
     }

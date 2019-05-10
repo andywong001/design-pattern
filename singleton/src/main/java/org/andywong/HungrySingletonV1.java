@@ -16,7 +16,7 @@ public class HungrySingletonV1 {
     /**
      * 私有化构造方法，让外部无法创建
      */
-    private HungrySingletonV1(){
+    private HungrySingletonV1() {
 
     }
 

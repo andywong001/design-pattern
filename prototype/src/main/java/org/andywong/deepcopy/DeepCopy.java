@@ -10,12 +10,12 @@ import java.util.Date;
  */
 public class DeepCopy {
     public static void main(String[] args) {
-        Form form = new Form("深度拷贝",new Date(),
+        Form form = new Form("深度拷贝", new Date(),
                 FormConfig.builder().img("这个是图片")
-                .maxSize(3).build()
-                );
+                        .maxSize(3).build()
+        );
 
-        Form clone = (Form)form.clone();
+        Form clone = (Form) form.clone();
 
         System.out.println(clone == form);
     }

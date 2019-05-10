@@ -15,7 +15,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         //被代理类
         Ticket ticket = new TrainStation();
-        Ticket ticketProxy = (Ticket)new MyInvocationHandler().getInstance(ticket);
+        Ticket ticketProxy = (Ticket) new MyInvocationHandler().getInstance(ticket);
         ticketProxy.buyTicket();
 
         byte[] byteProxy = ProxyGenerator.generateProxyClass("$Proxy0", new Class[]{Ticket.class});

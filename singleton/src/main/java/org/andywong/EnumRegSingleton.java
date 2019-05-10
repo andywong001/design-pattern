@@ -6,7 +6,7 @@ package org.andywong;
  * @author andywong
  * @date 2019-05-10 00:17
  */
-public enum  EnumRegSingleton {
+public enum EnumRegSingleton {
     INSTANCE;
 
     private Object object;

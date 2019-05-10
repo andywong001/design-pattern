@@ -13,11 +13,11 @@ public class Factory {
     /**
      * 这个值从配置读取
      */
-    private static  final  String db ="MYSQL";
+    private static final String db = "MYSQL";
 
-    IMember connectionMember(){
+    IMember connectionMember() {
         IMember member = null;
-        switch (db){
+        switch (db) {
             case "MYSQL":
                 member = new IMember.MysqlMember();
                 break;
@@ -28,9 +28,9 @@ public class Factory {
         return member;
     }
 
-    IJoinLog connectionJoinLog(){
+    IJoinLog connectionJoinLog() {
         IJoinLog joinLog = null;
-        switch (db){
+        switch (db) {
             case "MYSQL":
                 joinLog = new IJoinLog.MysqlJoinLog();
                 break;

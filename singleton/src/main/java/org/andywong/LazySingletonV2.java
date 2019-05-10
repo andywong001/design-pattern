@@ -15,12 +15,12 @@ public class LazySingletonV2 {
     /**
      * 私有化构造方法，让外部无法创建
      */
-    private LazySingletonV2(){
+    private LazySingletonV2() {
 
     }
 
     public static synchronized LazySingletonV2 getInstance() {
-        if(null == lazySingletonV2){
+        if (null == lazySingletonV2) {
             lazySingletonV2 = new LazySingletonV2();
         }
         return lazySingletonV2;

@@ -11,9 +11,10 @@ public class SoftTicketProxy implements Ticket {
      * 第三方是需要授权的
      */
     private TrainStation trainStation;
+
     @Override
     public void buyTicket() {
-        if(null == trainStation){
+        if (null == trainStation) {
             trainStation = new TrainStation();
         }
         trainStation.buyTicket();

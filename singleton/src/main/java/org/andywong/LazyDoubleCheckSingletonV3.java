@@ -15,14 +15,14 @@ public class LazyDoubleCheckSingletonV3 {
     /**
      * 私有化构造方法，让外部无法创建
      */
-    private LazyDoubleCheckSingletonV3(){
+    private LazyDoubleCheckSingletonV3() {
 
     }
 
     public static LazyDoubleCheckSingletonV3 getInstance() {
-        if(null == lazyDoubleCheckSingletonV3){
-            synchronized (LazyDoubleCheckSingletonV3.class){
-                if(null == lazyDoubleCheckSingletonV3){
+        if (null == lazyDoubleCheckSingletonV3) {
+            synchronized (LazyDoubleCheckSingletonV3.class) {
+                if (null == lazyDoubleCheckSingletonV3) {
                     lazyDoubleCheckSingletonV3 = new LazyDoubleCheckSingletonV3();
                 }
             }

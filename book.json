@@ -1,14 +1,14 @@
 {
-    "plugins": [
-    	"-sharing",
-         "back-to-top-button",
-         "chapter-fold",
-         "code",
-         "copy-code-button",
-         "-lunr",
-         "-search",
-         "search-pro",
-         "splitter",
-         "pageview-count"
-    ]
+  "plugins": [
+    "-sharing",
+    "back-to-top-button",
+    "chapter-fold",
+    "code",
+    "copy-code-button",
+    "-lunr",
+    "-search",
+    "search-pro",
+    "splitter",
+    "pageview-count"
+  ]
 }

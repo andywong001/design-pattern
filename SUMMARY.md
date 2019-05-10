@@ -25,7 +25,7 @@
             * [4.ThreadLoal单例](singleton/singleton/threadLocalSingleton.md)
             * [5.静态内部类式单例](singleton/singleton/innerClassSingleton.md)
         * [第二节: 破坏单例模式的方式有哪些](singleton/singleton/破坏单例模式的方式.md)
-        * [第三节: 内部类的执行逻辑，并画出时序图](singleton/singleton/UML.md)
+        * [第三节: 内部类的执行逻辑，并画出时序图](singleton/singleton/单例内部类时序图.md)
     * [3.原型模式](prototype/README.md)
         * [第一节: 运用原型模式重构一段业务代码](prototype/prototype/code.md)
         * [第二节:浅拷贝](prototype/prototype/浅拷贝.md)

@@ -16,7 +16,7 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Form implements Cloneable, Serializable{
+public class Form implements Cloneable, Serializable {
 
     /**
      * 表单名
@@ -34,7 +34,7 @@ public class Form implements Cloneable, Serializable{
     private FormConfig formConfig;
 
     @Override
-    protected Object clone(){
+    protected Object clone() {
         Object o = null;
         try {
             o = this.deepClone();
@@ -51,7 +51,7 @@ public class Form implements Cloneable, Serializable{
 
         ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(byteArrayOutputStream.toByteArray());
         ObjectInputStream objectInputStream = new ObjectInputStream(byteArrayInputStream);
-        Form o = (Form)objectInputStream.readObject();
+        Form o = (Form) objectInputStream.readObject();
 
         return o;
     }

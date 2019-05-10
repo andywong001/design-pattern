@@ -45,3 +45,4 @@
     * Proxy.newProxyInstance(clazz.getClassLoader(),clazz.getInterfaces(),this);源码查看
     * mac 反编译软件
     * 动态代理原理总结
+    * 思考：为什么JDK动态代理中要求目标类实现的接口数量不能超过65535个？

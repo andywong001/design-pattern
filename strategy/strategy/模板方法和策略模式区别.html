@@ -1,0 +1,1174 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第三节:模板方法和策略模式区别 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../design-pattern/gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../design-pattern/gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../design-pattern/gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../design-pattern/gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../design-pattern/gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../design-pattern/gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../../design-pattern/observer/" />
+    
+    
+    <link rel="prev" href="../../design-pattern/template/template/code.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../design-pattern/">
+            
+                <a href="../../design-pattern/">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../design-pattern/summary/specification/">
+            
+                <a href="../../design-pattern/summary/specification/">
+            
+                    
+                    第一章:设计7大原则
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../design-pattern/summary/specification/单一职责.html">
+            
+                <a href="../../design-pattern/summary/specification/单一职责.html">
+            
+                    
+                    1.单一职责
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../design-pattern/summary/specification/开闭原则.html">
+            
+                <a href="../../design-pattern/summary/specification/开闭原则.html">
+            
+                    
+                    2.开闭原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../design-pattern/summary/specification/里氏替换原则.html">
+            
+                <a href="../../design-pattern/summary/specification/里氏替换原则.html">
+            
+                    
+                    3.里氏替换原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../design-pattern/summary/specification/依赖倒转.html">
+            
+                <a href="../../design-pattern/summary/specification/依赖倒转.html">
+            
+                    
+                    4.依赖倒转
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../design-pattern/summary/specification/接口隔离.html">
+            
+                <a href="../../design-pattern/summary/specification/接口隔离.html">
+            
+                    
+                    5.接口隔离
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../design-pattern/summary/specification/合成复用.html">
+            
+                <a href="../../design-pattern/summary/specification/合成复用.html">
+            
+                    
+                    6.合成复用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../../design-pattern/summary/specification/迪米特原则.html">
+            
+                <a href="../../design-pattern/summary/specification/迪米特原则.html">
+            
+                    
+                    7.迪米特原则(最少人知道原则)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../design-pattern/summary/create/">
+            
+                <a href="../../design-pattern/summary/create/">
+            
+                    
+                    第二章:创建型模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../design-pattern/factory/">
+            
+                <a href="../../design-pattern/factory/">
+            
+                    
+                    1.工厂模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../design-pattern/factory/factory/UML类结构图代码实现.html">
+            
+                <a href="../../design-pattern/factory/factory/UML类结构图代码实现.html">
+            
+                    
+                    第一节: UML类结构图、代码实现
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1.1" data-path="../../design-pattern/factory/factory/简单工厂.html">
+            
+                <a href="../../design-pattern/factory/factory/简单工厂.html">
+            
+                    
+                    1. 简单工厂
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.1.2" data-path="../../design-pattern/factory/factory/工厂方法.html">
+            
+                <a href="../../design-pattern/factory/factory/工厂方法.html">
+            
+                    
+                    2. 工厂方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.1.3" data-path="../../design-pattern/factory/factory/抽象工厂.html">
+            
+                <a href="../../design-pattern/factory/factory/抽象工厂.html">
+            
+                    
+                    3. 抽象工厂
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../../design-pattern/factory/factory/产品族和产品等级.html">
+            
+                <a href="../../design-pattern/factory/factory/产品族和产品等级.html">
+            
+                    
+                    第二节: 深刻理解产品族和产品等级结构之间的关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../../design-pattern/factory/factory/区别.html">
+            
+                <a href="../../design-pattern/factory/factory/区别.html">
+            
+                    
+                    第三节: 理解简单工厂、工厂方法和抽象工厂的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../design-pattern/singleton/">
+            
+                <a href="../../design-pattern/singleton/">
+            
+                    
+                    2.单例模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../../design-pattern/singleton/singleton/常见单例模式的写法及优缺点.html">
+            
+                <a href="../../design-pattern/singleton/singleton/常见单例模式的写法及优缺点.html">
+            
+                    
+                    第一节: 常见单例模式的写法及优缺点
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1.1" data-path="../../design-pattern/singleton/singleton/hungrySingleton.html">
+            
+                <a href="../../design-pattern/singleton/singleton/hungrySingleton.html">
+            
+                    
+                    1.饿汉式单例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.1.2" data-path="../../design-pattern/singleton/singleton/lazySingleton.html">
+            
+                <a href="../../design-pattern/singleton/singleton/lazySingleton.html">
+            
+                    
+                    2.懒汉式单例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.1.3" data-path="../../design-pattern/singleton/singleton/registered.html">
+            
+                <a href="../../design-pattern/singleton/singleton/registered.html">
+            
+                    
+                    3.注册式(枚举、容器缓存)单例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.1.4" data-path="../../design-pattern/singleton/singleton/threadLocalSingleton.html">
+            
+                <a href="../../design-pattern/singleton/singleton/threadLocalSingleton.html">
+            
+                    
+                    4.ThreadLoal单例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.1.5" data-path="../../design-pattern/singleton/singleton/innerClassSingleton.html">
+            
+                <a href="../../design-pattern/singleton/singleton/innerClassSingleton.html">
+            
+                    
+                    5.静态内部类式单例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../../design-pattern/singleton/singleton/破坏单例模式的方式.html">
+            
+                <a href="../../design-pattern/singleton/singleton/破坏单例模式的方式.html">
+            
+                    
+                    第二节: 破坏单例模式的方式有哪些
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../../design-pattern/singleton/singleton/UML.html">
+            
+                <a href="../../design-pattern/singleton/singleton/UML.html">
+            
+                    
+                    第三节: 内部类的执行逻辑，并画出时序图
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../design-pattern/prototype/">
+            
+                <a href="../../design-pattern/prototype/">
+            
+                    
+                    3.原型模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../../design-pattern/prototype/prototype/code.html">
+            
+                <a href="../../design-pattern/prototype/prototype/code.html">
+            
+                    
+                    第一节: 运用原型模式重构一段业务代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="../../design-pattern/prototype/prototype/浅拷贝.html">
+            
+                <a href="../../design-pattern/prototype/prototype/浅拷贝.html">
+            
+                    
+                    第二节:浅拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="../../design-pattern/prototype/prototype/深拷贝.html">
+            
+                <a href="../../design-pattern/prototype/prototype/深拷贝.html">
+            
+                    
+                    第三节:深拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.4" data-path="../../design-pattern/prototype/prototype/克隆破坏单例模式.html">
+            
+                <a href="../../design-pattern/prototype/prototype/克隆破坏单例模式.html">
+            
+                    
+                    第四节:克隆破坏单例模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../design-pattern/summary/structural/">
+            
+                <a href="../../design-pattern/summary/structural/">
+            
+                    
+                    第三章:结构型模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../design-pattern/adapter/">
+            
+                <a href="../../design-pattern/adapter/">
+            
+                    
+                    1.适配器模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../../design-pattern/adapter/adapter/装饰者和适配器模式的区别.html">
+            
+                <a href="../../design-pattern/adapter/adapter/装饰者和适配器模式的区别.html">
+            
+                    
+                    第一节: 思考并总结装饰者模式和适配器模式的根本区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../../design-pattern/adapter/adapter/code.html">
+            
+                <a href="../../design-pattern/adapter/adapter/code.html">
+            
+                    
+                    第二节:使用适配模式，重构一段需要升级功能且兼容老系统的业务代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../design-pattern/decorator/">
+            
+                <a href="../../design-pattern/decorator/">
+            
+                    
+                    2.装饰者模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../../design-pattern/decorator/decorator/装饰者和适配器模式的区别.html">
+            
+                <a href="../../design-pattern/decorator/decorator/装饰者和适配器模式的区别.html">
+            
+                    
+                    第一节: 思考并总结装饰者模式和适配器模式的根本区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../design-pattern/proxy/">
+            
+                <a href="../../design-pattern/proxy/">
+            
+                    
+                    3.代理模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../../design-pattern/proxy/proxy/静态代理.html">
+            
+                <a href="../../design-pattern/proxy/proxy/静态代理.html">
+            
+                    
+                    第一节: 静态代理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../../design-pattern/proxy/proxy/动态代理.html">
+            
+                <a href="../../design-pattern/proxy/proxy/动态代理.html">
+            
+                    
+                    第二节: 动态代理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.2.1" data-path="../../design-pattern/proxy/proxy/JDK动态代理.html">
+            
+                <a href="../../design-pattern/proxy/proxy/JDK动态代理.html">
+            
+                    
+                    JDK动态代理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2.2" data-path="../../design-pattern/proxy/proxy/CGLIB动态代理.html">
+            
+                <a href="../../design-pattern/proxy/proxy/CGLIB动态代理.html">
+            
+                    
+                    CGLIB动态代理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.3" data-path="../../design-pattern/proxy/proxy/仿JDK动态代理实现原理手写一遍.html">
+            
+                <a href="../../design-pattern/proxy/proxy/仿JDK动态代理实现原理手写一遍.html">
+            
+                    
+                    第三节: 仿JDK动态代理实现原理手写一遍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4" data-path="../../design-pattern/proxy/proxy/why.html">
+            
+                <a href="../../design-pattern/proxy/proxy/why.html">
+            
+                    
+                    第四节: 为什么JDK动态代理中要求目标类实现的接口数量不能超过65535个
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.5" data-path="../../design-pattern/proxy/proxy/代理模式和装饰者模式的区别.html">
+            
+                <a href="../../design-pattern/proxy/proxy/代理模式和装饰者模式的区别.html">
+            
+                    
+                    第五节:代理模式和装饰者模式的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.6" data-path="../../design-pattern/proxy/proxy/静态代理和动态代理的区别.html">
+            
+                <a href="../../design-pattern/proxy/proxy/静态代理和动态代理的区别.html">
+            
+                    
+                    第六节:静态代理和动态代理的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.7" data-path="../../design-pattern/proxy/proxy/JDK代理和CGLIB代理的区别.html">
+            
+                <a href="../../design-pattern/proxy/proxy/JDK代理和CGLIB代理的区别.html">
+            
+                    
+                    第七节:JDK代理和CGLIB代理的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.8" data-path="../../design-pattern/proxy/proxy/代理模式在Spring中的应用.html">
+            
+                <a href="../../design-pattern/proxy/proxy/代理模式在Spring中的应用.html">
+            
+                    
+                    第八节:代理模式在Spring中的应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../design-pattern/summary/behavioral/">
+            
+                <a href="../../design-pattern/summary/behavioral/">
+            
+                    
+                    第四章:行为型模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../design-pattern/delegate/">
+            
+                <a href="../../design-pattern/delegate/">
+            
+                    
+                    1.委派模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../../design-pattern/delegate/delegate/UML.html">
+            
+                <a href="../../design-pattern/delegate/delegate/UML.html">
+            
+                    
+                    第一节: 举例Spring源码中你见过的委派模式，并画出类关系图
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../design-pattern/strategy/">
+            
+                <a href="../../design-pattern/strategy/">
+            
+                    
+                    2.策略模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="../../design-pattern/strategy/strategy/code.html">
+            
+                <a href="../../design-pattern/strategy/strategy/code.html">
+            
+                    
+                    第一节: 利用策略模式重构一段业务代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="../../design-pattern/strategy/strategy/模板方法和策略模式区别.html">
+            
+                <a href="../../design-pattern/strategy/strategy/模板方法和策略模式区别.html">
+            
+                    
+                    第二节:模板方法和策略模式区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../design-pattern/template/">
+            
+                <a href="../../design-pattern/template/">
+            
+                    
+                    3.模板方法模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="../../design-pattern/template/template/实现方式.html">
+            
+                <a href="../../design-pattern/template/template/实现方式.html">
+            
+                    
+                    第一节: 模板模式除了继承以外，还有哪些实现方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2" data-path="../../design-pattern/template/template/code.html">
+            
+                <a href="../../design-pattern/template/template/code.html">
+            
+                    
+                    第二节: 使用适配模式，重构一段需要升级功能且兼容老系统的业务代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.3.3" data-path="模板方法和策略模式区别.html">
+            
+                <a href="模板方法和策略模式区别.html">
+            
+                    
+                    第三节:模板方法和策略模式区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../../design-pattern/observer/">
+            
+                <a href="../../design-pattern/observer/">
+            
+                    
+                    4.观察者模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.4.1" data-path="../../design-pattern/observer/observer/code.html">
+            
+                <a href="../../design-pattern/observer/observer/code.html">
+            
+                    
+                    第一节: 用Guava API实现社区提问通知的业务场景
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../../design-pattern/chain/">
+            
+                <a href="../../design-pattern/chain/">
+            
+                    
+                    5.责任链模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../design-pattern/summary/final/">
+            
+                <a href="../../design-pattern/summary/final/">
+            
+                    
+                    第五章:总结
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../design-pattern/summary/final/final.html">
+            
+                <a href="../../design-pattern/summary/final/final.html">
+            
+                    
+                    一句话总结设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../design-pattern/summary/final/spring.html">
+            
+                <a href="../../design-pattern/summary/final/spring.html">
+            
+                    
+                    列举SpringAOP、IOC、DI应用中设计模式的代码片段
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../design-pattern/summary/TODO/">
+            
+                <a href="../../design-pattern/summary/TODO/">
+            
+                    
+                    第六章:TODO
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../design-pattern" >第三节:模板方法和策略模式区别</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7B2C;&#x4E09;&#x8282;&#x6A21;&#x677F;&#x65B9;&#x6CD5;&#x548C;&#x7B56;&#x7565;&#x6A21;&#x5F0F;&#x533A;&#x522B;">&#x7B2C;&#x4E09;&#x8282;:&#x6A21;&#x677F;&#x65B9;&#x6CD5;&#x548C;&#x7B56;&#x7565;&#x6A21;&#x5F0F;&#x533A;&#x522B;</h1>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../../design-pattern/template/template/code.html" class="navigation navigation-prev " aria-label="Previous page: 第二节: 使用适配模式，重构一段需要升级功能且兼容老系统的业务代码">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../../design-pattern/observer/" class="navigation navigation-next " aria-label="Next page: 4.观察者模式">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第三节:模板方法和策略模式区别","level":"1.5.3.3","depth":3,"next":{"title":"4.观察者模式","level":"1.5.4","depth":2,"path":"observer/README.md","ref":"observer/README.md","articles":[{"title":"第一节: 用Guava API实现社区提问通知的业务场景","level":"1.5.4.1","depth":3,"path":"observer/observer/code.md","ref":"observer/observer/code.md","articles":[]}]},"previous":{"title":"第二节: 使用适配模式，重构一段需要升级功能且兼容老系统的业务代码","level":"1.5.3.2","depth":3,"path":"template/template/code.md","ref":"template/template/code.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"../strategy/strategy/模板方法和策略模式区别.md","mtime":"2019-05-10T08:06:37.984Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-10T08:08:58.698Z"},"basePath":"../../design-pattern","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../design-pattern/gitbook/gitbook.js"></script>
+    <script src="../../design-pattern/gitbook/theme.js"></script>
+    
+        
+        <script src="../../design-pattern/gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../design-pattern/gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../design-pattern/gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../design-pattern/gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../design-pattern/gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../design-pattern/gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../design-pattern/gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

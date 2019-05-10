@@ -11,38 +11,58 @@
     * [7.迪米特原则(最少人知道原则)](summary/specification/迪米特原则.md)
 * [第二章:创建型模式](summary/create/README.md)
     * [1.工厂模式](factory/README.md)
-        * [1.1 工厂三兄弟之小弟简单工厂](factory/factory/简单工厂.md)
-        * [1.2 工厂三兄弟之二哥工厂方法](factory/factory/工厂方法.md)
-        * [1.3 工厂三兄弟之大哥抽象工厂](factory/factory/抽象工厂.md)
+        * [第一节: UML类结构图、代码实现](factory/factory/UML类结构图代码实现.md)
+            * [1. 简单工厂](factory/factory/简单工厂.md)
+            * [2. 工厂方法](factory/factory/工厂方法.md)
+            * [3. 抽象工厂](factory/factory/抽象工厂.md)
+        * [第二节: 深刻理解产品族和产品等级结构之间的关系](factory/factory/产品族和产品等级.md)
+        * [第三节: 理解简单工厂、工厂方法和抽象工厂的区别](factory/factory/区别.md)
     * [2.单例模式](singleton/README.md)
+        * [第一节: 常见单例模式的写法及优缺点](singleton/singleton/常见单例模式的写法及优缺点.md)
+            * [1.饿汉式单例](singleton/singleton/hungrySingleton.md)
+            * [2.懒汉式单例](singleton/singleton/lazySingleton.md)
+            * [3.注册式(枚举、容器缓存)单例](singleton/singleton/registered.md)
+            * [4.ThreadLoal单例](singleton/singleton/threadLocalSingleton.md)
+            * [5.静态内部类式单例](singleton/singleton/innerClassSingleton.md)
+        * [第二节: 破坏单例模式的方式有哪些](singleton/singleton/破坏单例模式的方式.md)
+        * [第三节: 内部类的执行逻辑，并画出时序图](singleton/singleton/UML.md)
     * [3.原型模式](prototype/README.md)
+        * [第一节: 运用原型模式重构一段业务代码](prototype/prototype/code.md)
+        * [第二节:浅拷贝](prototype/prototype/浅拷贝.md)
+        * [第三节:深拷贝](prototype/prototype/深拷贝.md)
+        * [第四节:克隆破坏单例模式](prototype/prototype/克隆破坏单例模式.md)
 * [第三章:结构型模式](summary/structural/README.md)
     * [1.适配器模式](adapter/README.md)
+        * [第一节: 思考并总结装饰者模式和适配器模式的根本区别](adapter/adapter/装饰者和适配器模式的区别.md)
+        * [第二节:使用适配模式，重构一段需要升级功能且兼容老系统的业务代码](adapter/adapter/code.md)
     * [2.装饰者模式](decorator/README.md)
+        * [第一节: 思考并总结装饰者模式和适配器模式的根本区别](decorator/decorator/装饰者和适配器模式的区别.md)
     * [3.代理模式](proxy/README.md)
+        * [第一节: 静态代理](proxy/proxy/静态代理.md)
+        * [第二节: 动态代理](proxy/proxy/动态代理.md)
+            * [JDK动态代理](proxy/proxy/JDK动态代理.md)
+            * [CGLIB动态代理](proxy/proxy/CGLIB动态代理.md)
+        * [第三节: 仿JDK动态代理实现原理手写一遍](proxy/proxy/仿JDK动态代理实现原理手写一遍.md)
+        * [第四节: 为什么JDK动态代理中要求目标类实现的接口数量不能超过65535个](proxy/proxy/why.md)
+        * [第五节:代理模式和装饰者模式的区别](proxy/proxy/代理模式和装饰者模式的区别.md)
+        * [第六节:静态代理和动态代理的区别](proxy/proxy/静态代理和动态代理的区别.md)
+        * [第七节:JDK代理和CGLIB代理的区别](proxy/proxy/JDK代理和CGLIB代理的区别.md)
+        * [第八节:代理模式在Spring中的应用](proxy/proxy/代理模式在Spring中的应用.md)
 * [第四章:行为型模式](summary/behavioral/README.md)
     * [1.委派模式](delegate/README.md)
+        * [第一节: 举例Spring源码中你见过的委派模式，并画出类关系图](delegate/delegate/UML.md)
     * [2.策略模式](strategy/README.md)
+        * [第一节: 利用策略模式重构一段业务代码](strategy/strategy/code.md)
+        * [第二节:模板方法和策略模式区别](strategy/strategy/模板方法和策略模式区别.md)
     * [3.模板方法模式](template/README.md)
+        * [第一节: 模板模式除了继承以外，还有哪些实现方式](template/template/实现方式.md)
+        * [第二节: 使用适配模式，重构一段需要升级功能且兼容老系统的业务代码](template/template/code.md)
+        * [第三节:模板方法和策略模式区别](../strategy/strategy/模板方法和策略模式区别.md)
     * [4.观察者模式](observer/README.md)
+        * [第一节: 用Guava API实现社区提问通知的业务场景](observer/observer/code.md)
     * [5.责任链模式](chain/README.md)
 * [第五章:总结](summary/final/README.md)
     * [一句话总结设计模式](summary/final/final.md)
     * [列举SpringAOP、IOC、DI应用中设计模式的代码片段](summary/final/spring.md)
-* TODO
-    * 第二节: 破坏单例模式的方式有哪些代码实现
-    * 枚举式注册单例为什么是线程安全的,查看底层源码
-    * 注册式容器缓存
-    * 单例内部类的执行逻辑，并画出时序图
-    * 原型模式
-    * 模板方法代码
-    * 模板模式在源码中的体现
-    * 适配器模式在源码中的体现
-    * 第一节: 模板模式除了继承以外，还有哪些实现方式
-    * 装饰者模式
-    * 装饰者模式在源码中的应用
-    * 图片地址问题xing
-    * Proxy.newProxyInstance(clazz.getClassLoader(),clazz.getInterfaces(),this);源码查看
-    * mac 反编译软件
-    * 动态代理原理总结
-    * 思考：为什么JDK动态代理中要求目标类实现的接口数量不能超过65535个？
+* [第六章:TODO](summary/TODO/README.md)
+
